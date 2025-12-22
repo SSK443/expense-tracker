@@ -1,0 +1,100 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  min-height: 100vh;
+  max-height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px;
+  background-color: black;
+}
+.box{
+  height: fit-content;
+  width: fit-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background-color: rgb(37, 35, 35);
+  color: white;
+}
+.top{
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+
+}
+.bottom{
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+button{
+  text-align: center;
+  font-size: medium;
+  font-weight: 500;
+  padding: 10px 15px;
+  background: indigo;
+  color: white;
+  border-radius: 5px;
+  border: none;
+
+}
+input{
+  padding: 10px ;
+  color: black;
+}
+#list{
+  height: fit-content;
+  width: fit-content;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: center;
+  gap: 5px;
+
+
+
+
+}
+article{
+  height: fit-content;
+  width: 350px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  background: #000;
+}
+@media (max-width:700px) {
+  .box{
+    width: 350px;
+    
+  }
+  input{
+   width: 120px;
+  }
+  .cards{
+    width: 300px;
+  }
+}
