@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function addExpense() {
     totalExp = 0;
     total.innerHTML = "";
-    if (result) {
+    if (result.length>0) {
       const list = document.createElement("div");
       list.id = "list";
       result.forEach((item) => {

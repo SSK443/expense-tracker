@@ -1,100 +1,136 @@
-*{
+/* Custom Properties for easy color changes */
+:root {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1e2f 100%);
+  --card-bg: #1e293b;
+  --text-main: #f8fafc;
+  --text-dim: #94a3b8;
+  --white: #ffffff;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: var(--white);
 }
-.container{
+
+body {
+  background: var(--bg-gradient);
+}
+
+.container {
   min-height: 100vh;
-  max-height: fit-content;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
-  padding: 10px;
-  background-color: black;
-}
-.box{
-  height: fit-content;
-  width: fit-content;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-radius: 10px;
-  background-color: rgb(37, 35, 35);
-  color: white;
 }
-.top{
-  height: fit-content;
-  width: fit-content;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 5px;
-  padding: 10px;
 
-}
-.bottom{
-  height: fit-content;
-  width: fit-content;
-  padding: 10px;
-  flex-direction: column;
+.box {
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5px;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
-button{
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
   text-align: center;
-  font-size: medium;
-  font-weight: 500;
-  padding: 10px 15px;
-  background: indigo;
-  color: white;
-  border-radius: 5px;
-  border: none;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
 
-}
-input{
-  padding: 10px ;
-  color: black;
-}
-#list{
-  height: fit-content;
-  width: fit-content;
-  padding: 10px;
+.top {
   display: flex;
-  flex-direction: column;
-  justify-content:flex-start;
-  align-items: center;
-  gap: 5px;
-
-
-
-
+  flex-direction: column; /* Stacked on mobile for better accessibility */
+  gap: 12px;
+  width: 100%;
 }
-article{
-  height: fit-content;
-  width: 350px;
-  padding: 5px;
+
+input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: white;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 12px;
+  background: var(--primary);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  transition: transform 0.1s, background 0.2s;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.bottom {
+  margin-top: 10px;
+  padding-top: 20px;
+  border-top: 1px solid #334155;
+  text-align: center;
+}
+
+.bottom h3 {
+  color: var(--text-dim);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.bottom h4 {
+  font-size: 2rem;
+  color: var(--white);
+  margin-top: 5px;
+}
+
+/* For your dynamic list items (Articles) */
+article {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5px;
-  background: #000;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
 }
-@media (max-width:700px) {
-  .box{
-    width: 350px;
-    
+
+@media (min-width: 480px) {
+  .top {
+    flex-direction: row; /* Horizontal on larger screens */
   }
-  input{
-   width: 120px;
-  }
-  .cards{
-    width: 300px;
-  }
+  
+  #inputOne { flex: 2; }
+  #inputTwo { flex: 1; }
 }
